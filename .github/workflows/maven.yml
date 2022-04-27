@@ -22,8 +22,6 @@ jobs:
         java-version: '8'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
     - name: build project
       run: mvn test-compile -pl dist -am
     - name: Test Flaky Tests of wildfly
